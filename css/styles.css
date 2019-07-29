@@ -1,0 +1,20 @@
+.page__content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.page__counter {
+    font-size: 50px;
+    color: red;
+    font-weight: bolder;
+    text-align: end;
+}
+
+.page__message {
+    margin-top: 50px;
+    border: 1px solid blue;
+    color: blue;
+    width: 400px;
+    text-align: center;
+}
