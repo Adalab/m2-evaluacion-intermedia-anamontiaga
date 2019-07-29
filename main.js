@@ -1,11 +1,10 @@
 "use strict";
 
-// al pulsar el botón de "prueba", acceder al contenido del input y mostrarlo en la consola
-
 // Nomeo elementos que voy a necesitar
 const btnEl = document.querySelector(".btn");
 const inputEl = document.querySelector(".input-number");
 const messageEl = document.querySelector(".page__message");
+const counterEl = document.querySelector(".page__counter");
 
 // Declaro función que recoge todas las acciones
 const compareNumberAndShow = function(ev) {
@@ -41,3 +40,11 @@ function showMessage() {
 
 // listener al btn para que ejecute  getImputValue y showConsole
 btnEl.addEventListener("click", compareNumberAndShow);
+
+// actualizar el contador de intentos cada vez que el usuario pruebe
+
+function updateCounter() {
+  counterEl.innerHTML = parseInt(counterEl.innerHTML) + 1;
+}
+
+btnEl.addEventListener("click", updateCounter);
